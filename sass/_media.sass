@@ -7,6 +7,18 @@
     &-pic
       width: 200px
 
+  .wrapper
+    max-width: 85vw
+
+  .product
+    &-main
+      &-pic
+        width: 220px
+    &-ingredient
+      padding: 2rem 3rem
+      &-pic
+        width: 100px
+
 @media screen and (max-width: 1024px)
   .header
     .wrapper
@@ -30,6 +42,16 @@
     &-pic
       width: 150px
 
+  .product
+    &-main
+      &-pic
+        width: 200px
+        margin-bottom: 1rem
+    &-ingredient
+      padding: 1rem 2rem
+      &-button
+        padding: 0.8rem 4rem
+
 @media screen and (max-width: 768px)
   .header
     .wrapper
@@ -43,6 +65,12 @@
       justify-content: unset
       position: relative
 
+  .main
+    padding: 6rem 0
+
+  .wrapper
+    max-width: 90vw
+
 @media screen and (max-width: 680px)
   .header
     &-title
@@ -50,37 +78,46 @@
     &-info
       max-width: 50vw
 
+  .product
+    &-ingredient
+      padding: 0.5rem 1rem
+      font-size: 0.9rem
+    &-main
+      &-pic
+        width: 150px
+        margin-bottom: 1rem
+
 @media screen and (max-width: 576px)
   .header
     .wrapper
       width: 90vw
     &-title
       font-size: 3rem
-      margin: 0 2rem 2rem 0
-    &-info
-      max-width: 55vw
-      &-text
-        max-width: 40vh
-    &-text
-      &-item
-        margin-bottom: 20px
-    &-description
-      align-items: flex-start
-
-@media screen and (max-width: 576px)
-  .header
-    &-title
       margin: 0 0 1rem
     &-info
       max-width: 100%
       &-text
         max-width: 60%
         margin: 1rem 0 2rem
+    &-text
+      &-item
+        margin-bottom: 20px
     &-description
       flex-direction: column
+      align-items: flex-start
     &-pic
       width: 140px
       bottom: 7rem
+
+  .product
+    &-ingredient
+      &-pic
+        width: 80px
+      &-button
+        padding: 0.5rem 2.5rem
+    &-main
+      &-pic
+        width: 130px
 
 @media screen and (max-width: 480px)
   .header
@@ -99,6 +136,14 @@
           left: -2rem
     &-pic
       width: 120px
+
+  .product
+    &-main
+      &-pic
+        width: 100px
+    &-ingredient
+      &-button
+        padding: 0.5rem 1.5rem
 
 @media screen and (max-width: 375px)
   .header

@@ -1,0 +1,41 @@
+.main
+  padding: 8rem 0
+  background: linear-gradient( 0deg, #e7e8e7 -35%, $shadow-dark-color 145%)
+.product
+  &-main
+    &-pic
+      width: 250px
+      margin-bottom: 3rem
+  &-title
+    display: none
+  &-container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-item
+      display: flex
+      align-items: center
+      flex-direction: column
+  &-ingredient
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 2rem 3rem
+    background-color: #ffffff73
+    border-radius: 50%
+    margin-bottom: 2rem
+    box-shadow: 0 0 10px $shadow-light-color, 0 0 10px $shadow-dark-color
+    figure
+      margin: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+    &-pic
+      width: 120px
+    &-title
+      text-transform: lowercase
+      color: $shadow-dark-color
+      margin: 10px 0
+      font-style: italic
+    &-button
+      padding: 1rem 6rem
