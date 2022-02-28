@@ -19,6 +19,13 @@
       &-pic
         width: 100px
 
+  .reviews
+    &-slider
+      &-container
+        height: 65vh
+    &-prev
+      left: -1%
+
 @media screen and (max-width: 1024px)
   .header
     .wrapper
@@ -52,6 +59,15 @@
       &-button
         padding: 0.8rem 4rem
 
+  .reviews
+    &-slider
+      width: 75%
+      height: 70vh
+      &-container
+        height: 70vh
+    &-prev
+      left: -2.5%
+
 @media screen and (max-width: 768px)
   .header
     .wrapper
@@ -71,6 +87,11 @@
   .wrapper
     max-width: 90vw
 
+  .reviews
+    &-photo
+      width: 120px
+      height: 120px
+
 @media screen and (max-width: 680px)
   .header
     &-title
@@ -86,6 +107,16 @@
       &-pic
         width: 150px
         margin-bottom: 1rem
+
+  .reviews
+    &-slider
+      width: 85%
+    &-prev
+      left: 25%
+      top: 25%
+    &-next
+      top: 25%
+      right: 30.5%
 
 @media screen and (max-width: 576px)
   .header
@@ -119,6 +150,15 @@
       &-pic
         width: 130px
 
+  .reviews
+    padding: 5rem 0 3rem
+    &-slider
+      width: 100%
+    &-text
+      max-width: 100%
+    &-next
+      right: 31.5%
+
 @media screen and (max-width: 480px)
   .header
     &-title
@@ -145,8 +185,35 @@
       &-button
         padding: 0.5rem 1.5rem
 
+  .reviews
+    &-img
+      &-current
+        padding: 3rem
+    &-next
+      right: 20%
+    &-prev
+      left: 12%
+
 @media screen and (max-width: 375px)
   .header
     &-info
       &-text
-        max-width: 46%
+        max-width: 55%
+
+  .product
+    &-main
+      &-pic
+        width: 85px
+    &-ingredient
+      font-size: 0.7rem
+      padding: 0.2rem 0.8rem
+      &-pic
+        width: 65px
+      &-button
+        font-size: 0.7rem
+
+  .reviews
+    padding: 5rem 0 1rem
+    &-img
+      &-current
+        padding: 2rem
