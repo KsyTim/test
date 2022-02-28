@@ -35,12 +35,12 @@
     position: relative
     display: flex
     flex-direction: column
-    color: #e5ae00
+    color: $button-bgc
   &-title
     font-size: 6rem
     margin: 0 0 3rem
     align-self: flex-start
-    text-shadow: 0 0 20px #3d0640, 0 0 10px #90888c
+    text-shadow: 0 0 20px $shadow-dark-color, 0 0 10px $shadow-light-color
   &-description
     display: flex
     align-items: center
@@ -51,25 +51,20 @@
     display: flex
     flex-direction: column
     &-text
-      margin: 0
+      +list-settings
       max-width: 50vh
       font-size: 1.2rem
       margin-bottom: 3rem
-      list-style: none
-      color: #cdcecf
+      color: $text-color
     &-button
-      display: flex
-      align-items: center
-      justify-content: center
       padding: 1rem 3rem
-      border: none
-      outline: none
       border-radius: 0.3rem
-      background-color: #e5ae00
+      background-color: $button-bgc
       text-transform: uppercase
-      color: #e4e4e5
+      color: $button-text
       font-weight: 700
-      text-shadow: 0 0 5px #3a063e, 0 0 5px #3a063e
+      text-shadow: 0 0 5px $shadow-dark-color, 0 0 5px $shadow-dark-color
+      +button-link-settings
   &-text
     &-item
       margin-bottom: 10px
