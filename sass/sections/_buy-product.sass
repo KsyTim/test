@@ -1,0 +1,86 @@
+.buy
+  &-product
+    background: linear-gradient(180deg, $bgc-color 0%, $footer-bgc-color 145%)
+    padding: 8rem 0 5rem
+    font-size: 2rem
+    color: $shadow-dark-color
+    &-title
+      display: none
+    &-timer
+      display: flex
+      flex-direction: column
+      align-items: center
+      align-self: center
+    &-price
+      display: flex
+      align-self: center
+      justify-content: space-between
+      width: 25%
+      padding: 1rem 0
+      &__old
+        position: relative
+        &::before
+          position: absolute
+          content: ""
+          width: 5rem
+          top: 50%
+          right: -35%
+          height: 5px
+          background-color: $button-bgc
+          transform: rotate(-15deg)
+      &__new
+        animation-name: rotateThis
+        animation-duration: 10s
+        animation-iteration-count: infinite
+    &-container
+      display: flex
+      align-items: center
+      justify-content: space-around
+    &-form
+      display: flex
+      flex-direction: column
+      flex: 0 0 40%
+      &__item
+        position: relative
+        input
+          +button-link-settings
+          background-color: transparent
+          margin-bottom: 2rem
+          border-bottom: 1px solid $shadow-dark-color
+          width: 100%
+          &::placeholder
+            color: $shadow-dark-color
+            font-size: 1.5rem
+        span
+          display: none
+        .active
+          display: block
+          width: 100%
+          height: 50%
+          background-color: transparent
+          position: absolute
+          content: ''
+          top: -50%
+          left: 0
+          border: 2px dotted $example-color
+          border-radius: 10px
+          right: 0
+          font-size: 1.25rem
+          padding: 0.3rem 0 0.3rem 1rem
+          color: $example-color
+          text-shadow: 0 0 5px $shadow-dark-color, 0 0 5px $shadow-dark-color
+    &-item
+      margin-bottom: 1rem
+    .wrapper
+      display: flex
+      flex-direction: column
+    &-button
+      margin-top: 1rem
+      font-size: 1.3rem
+
+@keyframes rotateThis
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(2)

@@ -29,6 +29,14 @@
     &-prev
       left: -1%
 
+  .buy
+    &-product
+      &-form
+        &__item
+          .active
+            font-size: 1rem
+            padding: 0.4rem 0 0.3rem 1rem
+
 @media screen and (max-width: 1024px)
   .header
     .wrapper
@@ -91,6 +99,14 @@
     &-prev
       left: -2.5%
 
+  .buy
+    &-product
+      padding: 3rem 0 5rem
+      &-form
+        flex: 0 0 50%
+      &-pic
+        width: 240px
+
 @media screen and (max-width: 768px)
   .header
     .wrapper
@@ -114,6 +130,13 @@
     &-photo
       width: 120px
       height: 120px
+
+  .buy
+    &-product
+      &-form
+        flex: 0 0 55%
+      &-pic
+        width: 210px
 
 @media screen and (max-width: 680px)
   .header
@@ -140,6 +163,16 @@
     &-next
       top: 25%
       right: 30.5%
+
+  .buy
+    &-product
+      &-container
+        justify-content: unset
+        flex-direction: column-reverse
+      &-pic
+        margin-bottom: 3rem
+      &-price
+        width: 35%
 
 @media screen and (max-width: 576px)
   .header
@@ -187,6 +220,11 @@
     &-next
       right: 31.5%
 
+  .buy
+    &-product
+      &-price
+        width: 40%
+
 @media screen and (max-width: 480px)
   .header
     &-title
@@ -225,6 +263,11 @@
     &-prev
       left: 12%
 
+  .buy
+    &-product
+      &-price
+        width: 50%
+
 @media screen and (max-width: 375px)
   .header
     &-info
@@ -255,3 +298,8 @@
     &-img
       &-current
         padding: 2rem
+
+  .buy
+    &-product
+      &-price
+        width: 60%
