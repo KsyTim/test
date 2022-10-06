@@ -11,7 +11,10 @@
 <body>
   <header class="header">
     <div class="header-bgc">
-      <video src="./assets/video/Ferrosan Multi-tabs advert.mp4" autoplay muted loop></video>
+      <video autoplay muted loop>
+        <source src="./assets/video/Ferrosan Multi-tabs advert.webm" type="video/webm">
+        <source src="./assets/video/Ferrosan Multi-tabs advert.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="wrapper">
       <h1 class="header-title">LevelUp</h1>
@@ -35,167 +38,178 @@
     </div>
   </header>
   <!-- /#header -->
-  <main class="main">
-    <div class="wrapper">
-      <section class="product">
-        <h2 class="product-title">product-title</h2>
-        <div class="product-container">
-          <div class="product-container-item">
-            <div class="product-ingredient">
-              <figure>
-                <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
-                <figcaption class="product-ingredient-title">Ingredient 1</figcaption>
-              </figure>
+  <div class="parallax-container">
+    <main class="main">
+      <div class="wrapper">
+        <section class="product">
+          <h2 class="product-title">product-title</h2>
+          <div class="product-container">
+            <div class="product-container-item">
+              <div class="product-ingredient">
+                <figure>
+                  <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
+                  <figcaption class="product-ingredient-title">Ingredient 1</figcaption>
+                </figure>
+              </div>
+              <div class="product-ingredient">
+                <figure>
+                  <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
+                  <figcaption class="product-ingredient-title">Ingredient 2</figcaption>
+                </figure>
+              </div>
+              <div class="product-ingredient">
+                <figure>
+                  <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
+                  <figcaption class="product-ingredient-title">Ingredient 3</figcaption>
+                </figure>
+              </div>
             </div>
-            <div class="product-ingredient">
-              <figure>
-                <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
-                <figcaption class="product-ingredient-title">Ingredient 2</figcaption>
-              </figure>
+            <div class="product-container-item">
+              <img src="./assets/img/prod.png" alt="Product: LevelUp" class="product-main-pic">
+              <a href="#order" class="header-info-button product-ingredient-button">Order</a>
             </div>
-            <div class="product-ingredient">
-              <figure>
-                <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
-                <figcaption class="product-ingredient-title">Ingredient 3</figcaption>
-              </figure>
+            <div class="product-container-item">
+              <div class="product-ingredient">
+                <figure>
+                  <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
+                  <figcaption class="product-ingredient-title">Ingredient 4</figcaption>
+                </figure>
+              </div>
+              <div class="product-ingredient">
+                <figure>
+                  <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
+                  <figcaption class="product-ingredient-title">Ingredient 5</figcaption>
+                </figure>
+              </div>
+              <div class="product-ingredient">
+                <figure>
+                  <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
+                  <figcaption class="product-ingredient-title">Ingredient 6</figcaption>
+                </figure>
+              </div>
             </div>
           </div>
-          <div class="product-container-item">
-            <img src="./assets/img/prod.png" alt="Product: LevelUp" class="product-main-pic">
-            <a href="#order" class="header-info-button product-ingredient-button">Order</a>
-          </div>
-          <div class="product-container-item">
-            <div class="product-ingredient">
-              <figure>
-                <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
-                <figcaption class="product-ingredient-title">Ingredient 4</figcaption>
-              </figure>
-            </div>
-            <div class="product-ingredient">
-              <figure>
-                <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
-                <figcaption class="product-ingredient-title">Ingredient 5</figcaption>
-              </figure>
-            </div>
-            <div class="product-ingredient">
-              <figure>
-                <img src="./assets/img/ingredient.png" alt="Product: LevelUp Ingredient" class="product-ingredient-pic" />
-                <figcaption class="product-ingredient-title">Ingredient 6</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /.product -->
-    </div>
-    <!-- /.wrapper -->
-  </main>
-  <!-- /.main -->
-  <section class="reviews">
-    <div class="wrapper">
-      <h2 class="reviews-title">reviews-title</h2>
-      <div class="reviews-slider-container">
-        <div class="reviews-slider">
-          <div class="reviews-img reviews-img-current">
-            <img src="./assets/img/person_01.png" alt="Person 01" class="reviews-photo">
-            <span class="reviews-name">John Black</span>
-            <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iste vitae magni
-              incidunt itaque perferendis reiciendis omnis pariatur! Voluptatibus fugiat laboriosam esse nisi deserunt quo
-              amet ex tempora beatae enim.</p>
-          </div>
-          <div class="reviews-img">
-            <img src="./assets/img/person_02.png" alt="Person 02" class="reviews-photo">
-            <span class="reviews-name">John Black</span>
-            <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iste vitae magni
-              incidunt
-              itaque perferendis reiciendis omnis pariatur! Voluptatibus fugiat laboriosam esse nisi deserunt quo amet ex
-              tempora
-              beatae enim.</p>
-          </div>
-          <div class="reviews-img">
-            <img src="./assets/img/person_03.png" alt="Person 03" class="reviews-photo">
-            <span class="reviews-name">John Black</span>
-            <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iste vitae magni
-              incidunt
-              itaque perferendis reiciendis omnis pariatur! Voluptatibus fugiat laboriosam esse nisi deserunt quo amet ex
-              tempora
-              beatae enim.</p>
-          </div>
-        </div>
-        <div class="reviews-prev reviews-n"><a href=""></a></div>
-        <div class="reviews-next reviews-n"><a href=""></a></div>
+        </section>
+        <!-- /.product -->
       </div>
-    </div>
-    <!-- /.wrapper -->
-  </section>
-  <!-- /.reviews -->
-  <section class="product-advantages">
-    <div class="wrapper">
-      <h2 class="product-advantages-title">product-advantages-title</h2>
-      <div class="product-advantages-content">
-        <div class="product-advantages-item">
-          <img src="./assets/img/doctor.png" alt="Product Advantages: Doctor" class="product-advantages-pic" />
-          <div class="product-advantages-description">
-            <p class="product-advantages-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, fugit laudantium
-              sint aut consequuntur blanditiis, dolores totam aliquam fugiat explicabo rem facere eveniet, atque eum labore
-              voluptatum illo molestias ratione delectus non. Eaque, ab placeat saepe exercitationem molestias labore deserunt
-              laborum incidunt quo? Blanditiis aut, quidem ut veniam quam iste eum necessitatibus autem! Consequuntur modi, laborum
-              eaque facilis illo ex doloremque reprehenderit unde? Dolor numquam, sint voluptatibus nemo animi magnam at praesentium
-              officiis, error voluptas molestias perferendis cumque? Recusandae, facere. Ipsum nesciunt id labore iure rerum ea eum,
-              dolor suscipit atque ratione ad ullam veritatis vitae nemo blanditiis nulla? Aliquid, doloribus repellat? Harum iste
-              debitis amet impedit ipsum ex perferendis nihil, ad aperiam, illo modi in obcaecati aliquam adipisci eaque nam! Quae
-              at doloribus soluta nostrum tenetur? Quod repellat pariatur quos dicta in esse non fuga amet quis possimus accusantium
-              accusamus tempora iusto maxime suscipit saepe facilis inventore, nihil asperiores.</p>
+      <!-- /.wrapper -->
+    </main>
+    <!-- /.main -->
+    <section class="reviews">
+      <div class="wrapper">
+        <h2 class="reviews-title">reviews-title</h2>
+        <div class="reviews-slider-container">
+          <div class="reviews-slider">
+            <div class="reviews-img reviews-img-current">
+              <img src="./assets/img/person_01.png" alt="Person 01" class="reviews-photo">
+              <span class="reviews-name">John Black</span>
+              <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iste vitae magni
+                incidunt itaque perferendis reiciendis omnis pariatur! Voluptatibus fugiat laboriosam esse nisi deserunt quo
+                amet ex tempora beatae enim.</p>
+            </div>
+            <div class="reviews-img">
+              <img src="./assets/img/person_02.png" alt="Person 02" class="reviews-photo">
+              <span class="reviews-name">John Black</span>
+              <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iste vitae magni
+                incidunt
+                itaque perferendis reiciendis omnis pariatur! Voluptatibus fugiat laboriosam esse nisi deserunt quo amet ex
+                tempora
+                beatae enim.</p>
+            </div>
+            <div class="reviews-img">
+              <img src="./assets/img/person_03.png" alt="Person 03" class="reviews-photo">
+              <span class="reviews-name">John Black</span>
+              <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iste vitae magni
+                incidunt
+                itaque perferendis reiciendis omnis pariatur! Voluptatibus fugiat laboriosam esse nisi deserunt quo amet ex
+                tempora
+                beatae enim.</p>
+            </div>
+          </div>
+          <div class="reviews-prev reviews-n"><a href=""></a></div>
+          <div class="reviews-next reviews-n"><a href=""></a></div>
+        </div>
+      </div>
+      <!-- /.wrapper -->
+    </section>
+    <!-- /.reviews -->
+    <section class="product-advantages">
+      <div class="wrapper">
+        <h2 class="product-advantages-title">product-advantages-title</h2>
+        <div class="product-advantages-content">
+          <div class="product-advantages-item">
+            <img src="./assets/img/dr.png" alt="Product Advantages: Doctor" class="product-advantages-pic" />
+            <div class="product-advantages-description">
+              <p class="product-advantages-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, fugit
+                laudantium
+                sint aut consequuntur blanditiis, dolores totam aliquam fugiat explicabo rem facere eveniet, atque eum
+                labore
+                voluptatum illo molestias ratione delectus non. Eaque, ab placeat saepe exercitationem molestias labore
+                deserunt
+                laborum incidunt quo? Blanditiis aut, quidem ut veniam quam iste eum necessitatibus autem! Consequuntur
+                modi, laborum
+                eaque facilis illo ex doloremque reprehenderit unde? Dolor numquam, sint voluptatibus nemo animi magnam at
+                praesentium
+                officiis, error voluptas molestias perferendis cumque? Recusandae, facere. Ipsum nesciunt id labore iure
+                rerum ea eum,
+                dolor suscipit atque ratione ad ullam veritatis vitae nemo blanditiis nulla? Aliquid, doloribus repellat?
+                Harum iste
+                debitis amet impedit ipsum ex perferendis nihil, ad aperiam, illo modi in obcaecati aliquam adipisci eaque
+                nam! Quae
+                at doloribus soluta nostrum tenetur? Quod repellat pariatur quos dicta in esse non fuga amet quis possimus
+                accusantium
+                accusamus tempora iusto maxime suscipit saepe facilis inventore, nihil asperiores.</p>
               <a href="#order" class="header-info-button product-advantages-button">Order</a>
+            </div>
+          </div>
+          <div class="product-advantages-item">
+            <ul class="product-advantages-list">
+              <li class="product-advantages-list__item">lorem ipsum</li>
+              <li class="product-advantages-list__item">lorem ipsum</li>
+              <li class="product-advantages-list__item">lorem ipsum dolor</li>
+            </ul>
           </div>
         </div>
-        <div class="product-advantages-item">
-          <ul class="product-advantages-list">
-            <li class="product-advantages-list__item">lorem ipsum</li>
-            <li class="product-advantages-list__item">lorem ipsum</li>
-            <li class="product-advantages-list__item">lorem ipsum dolor</li>
-          </ul>
+      </div>
+      <!-- /.wrapper -->
+    </section>
+    <!-- /.product-advantages -->
+    <footer class="buy-product" id="order">
+      <div class="wrapper">
+        <h2 class="buy-product-item buy-product-title">buy-product-title</h2>
+        <div class="buy-product-item buy-product-timer">
+          <span class="timer-action"></span>
+          <div class="buy-timer-numbers" id="timer">
+            <span id="timer-hours">19</span>
+            <span>:</span>
+            <span id="timer-minutes">45</span>
+            <span>:</span>
+            <span id="timer-seconds">12</span>
+          </div>
+        </div>
+        <div class="buy-product-item buy-product-price">
+          <div class="buy-product-price__old">$20</div>
+          <div class="buy-product-price__new">$18</div>
+        </div>
+        <div class="buy-product-item buy-product-container">
+          <form action="" class="buy-product-form">
+            <div class="buy-product-form__item">
+              <input type="text" name="name" id="name" placeholder="Enter name">
+              <span class="buy-product-name">Enter name... For example, Anna</span>
+            </div>
+            <div class="buy-product-form__item">
+              <input type="text" name="phone" id="phone" placeholder="Enter phone">
+              <span class="buy-product-phone">Enter phone... For example, 89123456789</span>
+            </div>
+            <a href="#order" class="header-info-button buy-product-button">Order</a>
+          </form>
+          <img src="./assets/img/prod.png" alt="Footer: Product Pic" class="buy-product-pic">
         </div>
       </div>
-    </div>
-    <!-- /.wrapper -->
-  </section>
-  <!-- /.product-advantages -->
-  <footer class="buy-product" id="order">
-    <div class="wrapper">
-      <h2 class="buy-product-item buy-product-title">buy-product-title</h2>
-      <div class="buy-product-item buy-product-timer">
-        <span class="timer-action"></span>
-        <div class="buy-timer-numbers" id="timer">
-          <span id="timer-hours">19</span>
-          <span>:</span>
-          <span id="timer-minutes">45</span>
-          <span>:</span>
-          <span id="timer-seconds">12</span>
-        </div>
-      </div>
-      <div class="buy-product-item buy-product-price">
-        <div class="buy-product-price__old">$20</div>
-        <div class="buy-product-price__new">$18</div>
-      </div>
-      <div class="buy-product-item buy-product-container">
-        <form action="" class="buy-product-form">
-          <div class="buy-product-form__item">
-            <input type="text" name="name" id="name" placeholder="Enter name">
-            <span class="buy-product-name">Enter name... For example, Anna</span>
-          </div>
-          <div class="buy-product-form__item">
-            <input type="text" name="phone" id="phone" placeholder="Enter phone">
-            <span class="buy-product-phone">Enter phone... For example, 89123456789</span>
-          </div>
-          <a href="#order" class="header-info-button buy-product-button">Order</a>
-        </form>
-        <img src="./assets/img/prod.png" alt="Footer: Product Pic" class="buy-product-pic">
-      </div>
-    </div>
-    <!-- /.wrapper -->
-  </footer>
-  <!-- /.buy-product -->
+      <!-- /.wrapper -->
+    </footer>
+    <!-- /.buy-product -->
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
           crossorigin="anonymous">
