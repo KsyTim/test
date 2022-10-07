@@ -1,6 +1,16 @@
 .main
   padding: 8rem 0
-  background: linear-gradient(0deg, #f5f5f5 0%, $shadow-dark-color 145%)
+  background-image: url(../assets/img/layered-waves-haikei.svg)
+  height: 100%
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  &-frame
+    position: absolute
+    bottom: -5px
+    right: 0
+    left: 0
 .product
   &-main
     &-pic
@@ -21,10 +31,10 @@
     flex-direction: column
     align-items: center
     padding: 2rem 3rem
-    background-color: #ffffff73
+    background-color: #ffffffbf
     border-radius: 50%
     margin-bottom: 2rem
-    box-shadow: 0 0 10px $shadow-light-color, 0 0 10px $shadow-dark-color
+    box-shadow: 0 0 10px $shadow-light-color
     figure
       margin: 0
       display: flex
