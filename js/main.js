@@ -25,13 +25,15 @@ $(document).ready(function () {
   };
   autoplay();
   $(document).click(function(e) {
-    e.preventDefault();
     if (e && e.target.closest('div')) {
       if (e.target.closest('div').matches('.reviews-next')) {
+        e.preventDefault();
         slide(true);
       } else if (e.target.closest('div').matches('.reviews-prev')) {
+        e.preventDefault();
         slide();
       } else if (e.target.matches('.buy-product-button')){
+        e.preventDefault();
         let res = [];
         $('.buy-product-form input').each(function(index, elem){
           res.push(elem.value ? true : false);
