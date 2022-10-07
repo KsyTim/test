@@ -1,87 +1,100 @@
 $(document).ready(function () {
-  function slider() {
-    $(".reviews-next").click(function(e){
-      e.preventDefault();
-      toNextSlide();
-    });
-
-    function toNextSlide() {
-      var currentSlide = $(".reviews-img.reviews-img-current");
-      var currentSlideIndex = $(".reviews-img.reviews-img-current").index();
-      var nextSlideIndex = currentSlideIndex + 1;
-      var nextSlide = $(".reviews-img").eq(nextSlideIndex);
-      currentSlide.fadeOut(100);
-      currentSlide.removeClass("reviews-img-current");
-
-      if (nextSlideIndex == $(".reviews-img:last").index() + 1) {
-        $(".reviews-img").eq(0).fadeIn(100);
-        $(".reviews-img").eq(0).addClass("reviews-img-current");
-        $('.reviews-img-current').removeAttr('style');
-      } else {
-        nextSlide.fadeIn(100);
-        nextSlide.addClass("reviews-img-current");
-        $('.reviews-img-current').removeAttr('style');
-      }
-    }
-
-    $(".reviews-prev").click(function(e){
-      e.preventDefault();
-      toPrevSlide();
-    });
-
-    function toPrevSlide() {
-      var currentSlide = $(".reviews-img.reviews-img-current");
-      var currentSlideIndex = $(".reviews-img.reviews-img-current").index();
-      var prevSlideIndex = currentSlideIndex - 1;
-      var prevSlide = $(".reviews-img").eq(prevSlideIndex);
-      currentSlide.fadeOut(100);
-      currentSlide.removeClass("reviews-img-current");
-      prevSlide.fadeIn(100);
-      prevSlide.addClass("reviews-img-current");
+  const slide = (next) => {
+    const currentSlide = $(".reviews-img.reviews-img-current");
+    let currentSlideIndex = $(".reviews-img.reviews-img-current").index();
+    const nextSlideIndex = next ? ++currentSlideIndex : --currentSlideIndex;
+    const nextSlide = $(".reviews-img").eq(nextSlideIndex);
+    currentSlide.fadeOut(100);
+    currentSlide.removeClass("reviews-img-current");
+    if (nextSlideIndex === $(".reviews-img:last").index() + 1) {
+      $(".reviews-img").eq(0).fadeIn(100);
+      $(".reviews-img").eq(0).addClass("reviews-img-current");
+      $('.reviews-img-current').removeAttr('style');
+    } else {
+      nextSlide.fadeIn(100);
+      nextSlide.addClass("reviews-img-current");
       $('.reviews-img-current').removeAttr('style');
     }
-
-    setInterval(toNextSlide, 3000);
-
-    function eventKey(e) {
-      switch (e.keyCode) {
-        case 37:
-          toPrevSlide();
-          break;
-
-        case 39:
-          toNextSlide();
-          break;
-      }
-    }
-    $(document).on("keydown", eventKey);
   }
+  let interval;
+  const autoplay = () => {
+    interval = setTimeout(function(){
+      slide(true);
+      autoplay();
+    }, 3000);
+  };
+  autoplay();
+  $(document).click(function(e) {
+    e.preventDefault();
+    if (e && e.target.closest('div')) {
+      if (e.target.closest('div').matches('.reviews-next')) {
+        slide(true);
+      } else if (e.target.closest('div').matches('.reviews-prev')) {
+        slide();
+      } else if (e.target.matches('.buy-product-button')){
+        let res = [];
+        $('.buy-product-form input').each(function(index, elem){
+          res.push(elem.value ? true : false);
+        })
+        if (res.includes(false)) {
+          $('.buy-product-name').addClass('active');
+          $('.buy-product-phone').addClass('active');
+        } else {
+          location.reload();
+        }
+        console.log(res.includes(false) ? '' : 'order');
+      }  
+    }
+  })
+  const mouseHandler = (elem, handler) => {
+    if (handler === 'over') {
+      $(elem).mouseover(function(e){
+        e.preventDefault();
+        clearTimeout(interval);
+      });
+    } else if (handler === 'leave') {
+      $(elem).mouseleave(function(e){
+        e.preventDefault();
+        autoplay();
+      });
+    }
+  }
+  mouseHandler('.reviews-next', 'over');
+  mouseHandler('.reviews-next', 'leave');
+  mouseHandler('.reviews-prev', 'over');
+  mouseHandler('.reviews-prev', 'leave');
+  mouseHandler('.reviews-img-current', 'over');
+  mouseHandler('.reviews-img-current', 'leave');
 
-  slider();
+  const eventKey = (e) => {
+    switch (e.keyCode) {
+      case 37:
+        toPrevSlide();
+        break;
 
-  function countTimer(dDay) {
-    function getTimeRemaining() {
+      case 39:
+        toNextSlide();
+        break;
+    }
+  }
+  $(document).on("keydown", eventKey);
+  const countTimer = (dDay) => {
+    const getTimeRemaining = () => {
       const dateStop = new Date(dDay).getTime(),
         dateNow = new Date().getTime(),
         timeRemaining = (dateStop - dateNow) / 1000,
         seconds = Math.floor(timeRemaining % 60),
         minutes = Math.floor((timeRemaining / 60) % 60),
-        hours = Math.floor(timeRemaining / 3600);
-      function preNumber(num){
-        if (num < 10) {
-          return `0${num}`;
-        } else {
-          return num;
-        }
-      }
+        hours = Math.floor(timeRemaining / 3600),
+        preNumber = (num) => num < 10 ? `0${num}` : num;
       return {
         timeRemaining,
         hours: preNumber(hours),
         minutes: preNumber(minutes),
         seconds: preNumber(seconds),
-      };
-    };
-    function updateClock() {
+      }
+    }
+    const updateClock = () => {
       const timer = getTimeRemaining();
       $('#timer-hours').text(`${timer.hours}`);
       $('#timer-minutes').text(`${timer.minutes}`);
@@ -102,9 +115,17 @@ $(document).ready(function () {
     updateClock();
   };
 
-  countTimer('02 March 2022 17:30:00');
+  const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const validate = (num) => num < 10 ? `0${num}` : num;
+  let date = new Date();
+  const localTimeZone = -(new Date().getTimezoneOffset()*60000);
+  date = date.getTime() + 30*60000 + localTimeZone;
+  const second  = parseInt(date / 1000) % 60;
+  const minute  = parseInt((date / 60) / 1000) % 60;
+  const hour = Math.floor(date/(1000*60*60)) % 24;
 
-  
+  countTimer(`${validate(new Date().getDate())} ${month[new Date().getMonth()]} ${new Date().getFullYear()} ${validate(hour)}:${validate(minute)}:${validate(second)}`);
+
   $(document).on('input', function(e) {
     const target = e.target;
     if(target) {
@@ -118,7 +139,6 @@ $(document).ready(function () {
       }
     }
   })
-
   $('.buy-product-form input').each(function(index, elem){
     if(elem){
       $(elem).focusin(function(e) {
@@ -147,7 +167,6 @@ $(document).ready(function () {
       })
     }
   })
-
   $(document).on('change', function(e) {
     const target = e.target;
     if(target) {
